@@ -16,6 +16,11 @@
           :date="notice.publishedAt"
         />
       </div>
+<<<<<<< HEAD
+=======
+    </div>
+    <Divider title="Equipo" />
+>>>>>>> cacb22e962da1bafd74e4906d49ee733c99e7955
     <div class="card-group" >
     <Divider title="Equipo" />
       <TeamCard 
@@ -28,7 +33,10 @@
       :rol="integrante.rol"
       :imagen="integrante.imagen"/>
     </div>
+<<<<<<< HEAD
     </div>
+=======
+>>>>>>> cacb22e962da1bafd74e4906d49ee733c99e7955
     <FooterPag/>
   </div>
 </template>
@@ -80,7 +88,11 @@ export default {
          imagen:"https://res.cloudinary.com/dkgxa2bjf/image/upload/c_scale,h_250,w_250/v1607144107/WhatsApp_Image_2020-11-28_at_4.39.25_PM_yt7tme.jpg",
         }
       ]
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> cacb22e962da1bafd74e4906d49ee733c99e7955
   },
   components: {
     NavBar,
@@ -102,5 +114,8 @@ export default {
     this.getNews();
   },
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> cacb22e962da1bafd74e4906d49ee733c99e7955
 </script>
