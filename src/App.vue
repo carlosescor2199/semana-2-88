@@ -1,6 +1,23 @@
 <template>
-  <div id="App">
+  <div id="app" class="bg-dark">
     <NavBar />
+    <Carousel />
+    <div class="container">
+      <Divider title="Noticias" />
+      <div id="news" class="row row-cols-1 row-cols-md-2">
+        <NewsCard
+          v-for="(notice, index) in this.news.slice(0, 4)"
+          :key="index"
+          :author="notice.author"
+          :title="notice.title"
+          :description="notice.description"
+          :url="notice.url"
+          :image="notice.urlToImage"
+          :date="notice.publishedAt"
+        />
+      </div>
+    </div>
+    <Divider title="Equipo" />
     <div class="card-group" >
       <TeamCard 
       class="col-md-3" 
@@ -12,17 +29,25 @@
       :rol="integrante.rol"
       :imagen="integrante.imagen"/>
     </div>
+    <FooterPag/>
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar';
+
+import NavBar from "./components/NavBar";
+import Carousel from "./components/Carousel";
+import NewsCard from "./components/NewsCard";
+import Divider from './components/Divider';
 import TeamCard from './components/TeamCard';
+import FooterPag from './components/FooterPag';
+import axios from "axios";
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
-      integrantes: [
+      news: [],
+       integrantes: [
         {
         codigo: 1,
         nombre: "Juan Camilo Fonseca",
@@ -55,12 +80,26 @@ export default {
          imagen:"https://res.cloudinary.com/dkgxa2bjf/image/upload/c_scale,h_250,w_250/v1607144107/WhatsApp_Image_2020-11-28_at_4.39.25_PM_yt7tme.jpg",
         }
       ]
-    }
+    };
   },
   components: {
-    TeamCard,
     NavBar,
-  }
-}
+    Carousel,
+    NewsCard,
+    TeamCard,
+    FooterPag,
+    Divider
+  },
+  methods: {
+    async getNews() {
+      const res = await axios.get(
+        "http://newsapi.org/v2/top-headlines?country=co&category=technology&apiKey=2ab63997a09846ffa5bc1f3f43455b70"
+      );
+      this.news = res.data.articles.slice(0,4);
+    },
+  },
+  mounted() {
+    this.getNews();
+  },
+};
 </script>
-

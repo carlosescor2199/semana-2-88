@@ -14,6 +14,7 @@
             </span>
         </div>   
     </div>
+  </div>
 </template>
 
 <script>
@@ -55,3 +56,4 @@
 
 
 </style>
+
