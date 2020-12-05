@@ -3,6 +3,8 @@
     <NavBar />
     <Carousel />
     <div class="container-fluid">
+      <Divider title="Servicios" />
+      <Services />
       <Divider title="Noticias" />
       <div id="news" class="row row-cols-1 row-cols-md-2">
         <NewsCard
@@ -41,7 +43,7 @@
     <FooterPag/>
 =======
       <Divider title="Equipo" />
-      <div class="card-group">
+      <div id="team" class="card-group">
         <TeamCard
           class="col-md-3"
           v-for="integrante in this.integrantes"
@@ -54,7 +56,7 @@
         />
       </div>
       <Divider title="Footer" />
-      <FooterPag />
+      <FooterPag id="footer"/>
     </div>
 >>>>>>> f179a748f2fbf61d75d2911b3eac1bb08dee33cf
   </div>
@@ -63,6 +65,7 @@
 <script>
 import NavBar from "./components/NavBar";
 import Carousel from "./components/Carousel";
+import Services from './components/Services'
 import NewsCard from "./components/NewsCard";
 import Divider from "./components/Divider";
 import TeamCard from "./components/TeamCard";
@@ -135,6 +138,7 @@ export default {
     TeamCard,
     FooterPag,
     Divider,
+    Services
   },
   methods: {
     async getNews() {
