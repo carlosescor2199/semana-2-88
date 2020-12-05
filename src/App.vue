@@ -17,6 +17,8 @@
         />
       </div>
     </div>
+    <TeamCard />
+    <FooterPag/>
   </div>
 </template>
 
@@ -25,6 +27,7 @@ import NavBar from "./components/NavBar";
 import Carousel from "./components/Carousel";
 import NewsCard from "./components/NewsCard";
 import Divider from './components/Divider'
+import FooterPag from './components/FooterPag';
 import axios from "axios";
 export default {
   name: "App",
@@ -37,6 +40,8 @@ export default {
     NavBar,
     Carousel,
     NewsCard,
+    TeamCard,
+    FooterPag,
     Divider
   },
   methods: {
