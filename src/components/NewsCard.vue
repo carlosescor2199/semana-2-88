@@ -6,7 +6,7 @@
           :src="image"
           class="card-img-top"
           :alt="image"
-          style="width: 100%; height: 300px;"
+          style="width: 100%; height: 400px;"
         />
         <div class="card-body">
           <h5 class="card-title">{{ shortTitle }}</h5>
