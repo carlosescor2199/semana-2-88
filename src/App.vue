@@ -1,7 +1,23 @@
 <template>
-  <div id="App">
+  <div id="app" class="bg-dark">
     <NavBar />
+    <Carousel />
+    <div class="container">
+      <Divider title="Noticias" />
+      <div id="news" class="row row-cols-1 row-cols-md-2">
+        <NewsCard
+          v-for="(notice, index) in this.news.slice(0, 4)"
+          :key="index"
+          :author="notice.author"
+          :title="notice.title"
+          :description="notice.description"
+          :url="notice.url"
+          :image="notice.urlToImage"
+          :date="notice.publishedAt"
+        />
+      </div>
     <div class="card-group" >
+    <Divider title="Equipo" />
       <TeamCard 
       class="col-md-3" 
       v-for="integrante in this.integrantes" 
@@ -12,17 +28,26 @@
       :rol="integrante.rol"
       :imagen="integrante.imagen"/>
     </div>
+    </div>
+    <FooterPag/>
   </div>
 </template>
 
 <script>
-import NavBar from './components/NavBar';
+
+import NavBar from "./components/NavBar";
+import Carousel from "./components/Carousel";
+import NewsCard from "./components/NewsCard";
+import Divider from './components/Divider';
 import TeamCard from './components/TeamCard';
+import FooterPag from './components/FooterPag';
+import axios from "axios";
 export default {
-  name: 'App',
+  name: "App",
   data() {
     return {
-      integrantes: [
+      news: [],
+       integrantes: [
         {
         codigo: 1,
         nombre: "Juan Camilo Fonseca",
@@ -58,9 +83,24 @@ export default {
     }
   },
   components: {
-    TeamCard,
     NavBar,
-  }
-}
-</script>
+    Carousel,
+    NewsCard,
+    TeamCard,
+    FooterPag,
+    Divider
+  },
+  methods: {
+    async getNews() {
+      const res = await axios.get(
+        "http://newsapi.org/v2/top-headlines?country=co&category=technology&apiKey=2ab63997a09846ffa5bc1f3f43455b70"
+      );
+      this.news = res.data.articles.slice(0,4);
+    },
+  },
+  mounted() {
+    this.getNews();
+  },
+};
 
+</script>
