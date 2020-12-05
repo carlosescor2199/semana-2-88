@@ -1,48 +1,59 @@
 <template>
-  <div class="card">
-    <img
-      src="data:image/jpeg;base64,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"
-      class="card-img-top"
-      alt="..."
-    />
-    <div class="card-body">
-      <h5 class="card-title">{{ nombre }}</h5>
-      <p class="card-text">
-        {{ descripcion }}
-      </p>
-      <p class="card-text">
-        <small class="text-muted">Last updated 3 mins ago</small>
-      </p>
+    <div class="card bg-dark">
+      <div class="card bg-light">
+        <span class="border border-secondary">
+            <img class="mx-auto d-block " :src= "imagen"/>
+            <div class="card-body">
+               <h5 class="card-title">{{nombre}}</h5>
+               <p class="card-text " >
+               <p class="text-justify">    
+                   {{descripcion}}
+               </p>
+               <p class="card-text font-italic"><small>Rol: {{rol}}</small></p>
+            </div>
+            </span>
+        </div>   
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: "TeamCard",
-  props: {
-    codigo: {
-      type: Number,
-      required: true,
-    },
-    nombre: {
-      type: String,
-      required: true,
-    },
-    descripcion: {
-      type: String,
-      required: true,
-    },
-    rol: {
-      type: String,
-      required: true,
-    },
-    imagen: {
-      type: String,
-      required: true,
-    },
-  },
-};
+    export default {
+        name: "TeamCard",
+        props: {
+            codigo: {
+                type: Number,
+                required: true,
+
+            },
+            nombre: {
+                type: String,
+                required: true,
+
+            },
+            descripcion: {
+                type: String,
+                required: true,
+
+            },
+            rol: {
+                type: String,
+                required: true,
+
+            },
+             imagen: {
+                type: String,
+                required: true,
+
+            }
+
+        }
+    }
+
 </script>
 
-<style scoped></style>
+<style scoped>
+
+
+</style>
+
