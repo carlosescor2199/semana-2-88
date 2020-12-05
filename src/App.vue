@@ -18,14 +18,9 @@
           :date="notice.publishedAt"
         />
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     </div>
     <Divider title="Equipo" />
->>>>>>> cacb22e962da1bafd74e4906d49ee733c99e7955
     <div class="card-group" >
-    <Divider title="Equipo" />
       <TeamCard 
       class="col-md-3" 
       v-for="integrante in this.integrantes" 
@@ -36,30 +31,9 @@
       :rol="integrante.rol"
       :imagen="integrante.imagen"/>
     </div>
-<<<<<<< HEAD
-    </div>
-=======
->>>>>>> cacb22e962da1bafd74e4906d49ee733c99e7955
-    <FooterPag/>
-=======
-      <Divider title="Equipo" />
-      <div id="team" class="card-group">
-        <TeamCard
-          class="col-md-3"
-          v-for="integrante in this.integrantes"
-          :key="integrante.key"
-          :codigo="integrante.codigo"
-          :nombre="integrante.nombre"
-          :descripcion="integrante.descripcion"
-          :rol="integrante.rol"
-          :imagen="integrante.imagen"
-        />
-      </div>
       <Divider title="Footer" />
       <FooterPag id="footer"/>
     </div>
->>>>>>> f179a748f2fbf61d75d2911b3eac1bb08dee33cf
-  </div>
 </template>
 
 <script>
@@ -90,7 +64,7 @@ export default {
           codigo: 2,
           nombre: "Viviana Marcela Chacón",
           descripcion:
-            "Soy Viviana Marcela Chacón, tengo 35 años, soy de la  de Bucaramanga pero por temas laborales resido en la ciudad de Bogotá, soy ingeniera devops, por 5 años trabajé como ingeniera de pruebas de calidad de software. Me encanta bailar, escuchar música y leer, este año decidí pertenecer a Misión TIC 2022.",
+            "Soy Viviana Marcela Chacón, tengo 35 años, soy de la hermosa de Bucaramanga pero por temas laborales resido en la ciudad de Bogotá, soy ingeniera devops, por 5 años trabajé como ingeniera de pruebas de calidad de software. Me encanta bailar, escuchar música y me apasiona leer, este año decidí pertenecer a Misión TIC 2022.",
           rol: "Desarrolladora Frontend",
           imagen:
             "https://res.cloudinary.com/dkgxa2bjf/image/upload/c_scale,w_250/v1607137239/vivi_uo0iip.jpg",
@@ -105,7 +79,6 @@ export default {
             "https://res.cloudinary.com/dkgxa2bjf/image/upload/c_scale,h_250,w_250/v1607144629/Captura_de_Pantalla_2020-12-05_a_la_s_12.03.07_a._m._oyatic.png",
         },
         {
-<<<<<<< HEAD
         codigo: 4,
         nombre: "Robinson",
         descripcion:
@@ -114,22 +87,7 @@ export default {
          imagen:"https://res.cloudinary.com/dkgxa2bjf/image/upload/c_scale,h_250,w_250/v1607144107/WhatsApp_Image_2020-11-28_at_4.39.25_PM_yt7tme.jpg",
         }
       ]
-<<<<<<< HEAD
     }
-=======
-=======
-          codigo: 4,
-          nombre: "Robinson Martinez",
-          descripcion:
-            "Soy Robinson Martínez, tengo 33 años, Ingeniero electrónico especialista en Aplicación de tecnologías digitales a la educación de la universidad de Santander, docente de tecnología e informática en Medellín. Nací en Palmira, graduado del instituto técnico industrial Humberto Raffo Rivera, y pertenezco a Misión TIC 2022.",
-          rol: "Scrum Master",
-          imagen:
-            "https://res.cloudinary.com/dkgxa2bjf/image/upload/c_scale,h_250,w_250/v1607144107/WhatsApp_Image_2020-11-28_at_4.39.25_PM_yt7tme.jpg",
-        },
-      ],
->>>>>>> f179a748f2fbf61d75d2911b3eac1bb08dee33cf
-    };
->>>>>>> cacb22e962da1bafd74e4906d49ee733c99e7955
   },
   components: {
     NavBar,
@@ -152,8 +110,5 @@ export default {
     this.getNews();
   },
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> cacb22e962da1bafd74e4906d49ee733c99e7955
 </script>
