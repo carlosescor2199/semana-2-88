@@ -1,9 +1,10 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-dark">
     <NavBar />
     <Carousel />
     <div class="container">
-      <div class="row row-cols-1 row-cols-md-2">
+      <Divider title="Noticias" />
+      <div id="news" class="row row-cols-1 row-cols-md-2">
         <NewsCard
           v-for="(notice, index) in this.news.slice(0, 4)"
           :key="index"
@@ -23,6 +24,7 @@
 import NavBar from "./components/NavBar";
 import Carousel from "./components/Carousel";
 import NewsCard from "./components/NewsCard";
+import Divider from './components/Divider'
 import axios from "axios";
 export default {
   name: "App",
@@ -35,13 +37,14 @@ export default {
     NavBar,
     Carousel,
     NewsCard,
+    Divider
   },
   methods: {
     async getNews() {
       const res = await axios.get(
         "http://newsapi.org/v2/top-headlines?country=co&category=technology&apiKey=2ab63997a09846ffa5bc1f3f43455b70"
       );
-      this.news = res.data.articles;
+      this.news = res.data.articles.slice(0,4);
     },
   },
   mounted() {
