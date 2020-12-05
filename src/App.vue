@@ -1,5 +1,6 @@
 <template>
-  <div id="app" class="bg-dark">
+  <div id="app" class="bg-dark" >
+  <div class="container-fluid">
     <NavBar />
     <Carousel />
     <div class="container-fluid">
@@ -34,6 +35,7 @@
       <Divider title="Footer" />
       <FooterPag id="footer"/>
     </div>
+  </div>
 </template>
 
 <script>
