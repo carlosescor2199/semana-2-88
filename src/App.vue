@@ -33,7 +33,6 @@
     </div>
       <Divider title="Footer" />
       <FooterPag id="footer"/>
-    </div>
   </div>
 </template>
 
@@ -65,7 +64,7 @@ export default {
           codigo: 2,
           nombre: "Viviana Chacón",
           descripcion:
-            "Soy Viviana Marcela Chacón, tengo 35 años, soy de Bucaramanga pero por temas laborales resido en la ciudad de Bogotá, soy ingeniera devops, por 5 años trabajé como ingeniera de pruebas de calidad de software. Me encanta bailar, escuchar música y leer, este año decidí pertenecer a Misión TIC 2022.",
+            "Soy Viviana Marcela Chacón, tengo 35 años, soy de la hermosa Bucaramanga pero por temas laborales resido en la ciudad de Bogotá, soy ingeniera devops, por 5 años trabajé como ingeniera de pruebas de calidad de software. Me encanta bailar, escuchar música y me apasiona leer, este año decidí pertenecer a Misión TIC 2022.",
           rol: "Desarrolladora Frontend",
           imagen:
             "https://res.cloudinary.com/dkgxa2bjf/image/upload/c_scale,w_220/v1607137239/vivi_uo0iip.jpg",
