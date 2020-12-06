@@ -1,5 +1,5 @@
 <template>
-    <div class="row ml-5 mr-auto" style="margin-left: 15px">
+    <div class="row ml-5 mr-auto">
         <div class="col-md-5">
             <div class="card">
                 <div class="card-body">
