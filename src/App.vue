@@ -10,7 +10,6 @@
         <NewsCard
           v-for="(notice, index) in this.news.slice(0, 4)"
           :key="index"
-          :author="notice.author"
           :title="notice.title"
           :description="notice.description"
           :url="notice.url"
