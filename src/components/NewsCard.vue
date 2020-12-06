@@ -13,7 +13,6 @@
           <p class="card-text">
             {{ shortDescription }}
           </p>
-          <span>{{ author ? author : "Anonimo" }} - {{ date }}</span>
         </div>
       </div>
     </a>
@@ -24,10 +23,6 @@
 export default {
   name: "NewsCard",
   props: {
-    author: {
-      type: String,
-      required: true,
-    },
     title: {
       type: String,
       required: true,
