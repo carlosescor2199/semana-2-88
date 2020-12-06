@@ -113,3 +113,11 @@ export default {
   },
 };
 </script>
+
+<style>
+#app {
+  width: 1200px;
+  margin-left: 10%;
+}
+
+</style>
